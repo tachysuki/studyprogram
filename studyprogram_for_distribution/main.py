@@ -43,7 +43,12 @@ def checkcom(inputcommand):
             start()
     else:
         print(inputcommand + ': Command not found')
-        start()
+        helpok = input('Do you want help? Y/n')
+        if helpok == '' or helpok == 'Y':
+            runcom = 'help'
+            comprocessing(runcom)
+        else:
+            start()
 
 if __name__ != '__main__':
     print('finish command.py')

@@ -40,6 +40,7 @@ def comprocessing(runcom):
         print('--------------')
         isstart = True
         import main
+        main.start()
     elif runcom == 'Japanese':
         print('mode: Japanese')
         if japaneseisrun == True:
