@@ -1,18 +1,13 @@
-#from main import runcoman
 import sys
-#import main
-#from main import *
 
-comlist = ['help','exit','Japanese','Math','Science','SocialStudies']
-#print('started command.py')
-#import main
-#runcom = main.runcom
-japaneseisrun = False
+comlist = ['help','exit','Japanese','Math','Science','SocialStudies','English','etc']
+japaneseisrun = False #各教科のプログラムを実行したかどうか
 mathisrun = False
 scienceisrun = False
 socialstuisrun = False
+englishisrun = False
 
-#print('command.py')
+
 def help():
     print('Help text')
 
@@ -22,17 +17,11 @@ def exit():
 def start():
     main.start()
 
-def comprocessing(runcom):
-    #print('comprocessing')
-    #print(runcom)
-    #from main import *
-    #import main
-    #print('finish import')
+def comprocessing(runcom):#コマンド実行の関数
     if runcom == 'exit':
         print('Finished StudyProgram')
         exit()
     elif runcom == 'help':
-        print(comlist)
         i = 0
         print('--------------')
         for i in range(0,len(comlist)):
@@ -72,7 +61,16 @@ def comprocessing(runcom):
             import socialstu
             socialstu.question()
         import socialstu
-    #elif runcom = 'etc'
+
+    elif runcom == 'English':
+        print('mode: English')
+        if englishisrun == True:
+            print('englishisrun == True')
+            import english
+            english.question()
+        import english
+    elif runcom == 'etc':
+        print('Sorry, we are preparing...')
 
 if __name__ == '__main__':
     print('Please launch main.py')

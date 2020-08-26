@@ -1,45 +1,22 @@
-#This program is test edition for distribution 20/6/14
-#import sys
+#This program is finished edition 20/8/26
 from command import *
 import command
-
 
 global runcom
 global isstart
 isstart = None
-#print(__name__)
 
-
-def start():
+def start():#コマンド入力関数
     inputcommand = input('>')
-    splitcom(inputcommand)
+    checkcom(inputcommand)
 
-def splitcom(inputcommand):
-    #print('splitcom')
-    if inputcommand in ' ':
-        inputcommand = com
-        comsp = com.split()
-        inputcommand = comsp[0]
-        inputoption = comsp[1]
-        #print(inputcommand)
-        #print(inputoption)
-        checkcom(inputcommand)
-    else:
-        checkcom(inputcommand)
-
-def checkcom(inputcommand):
-    #print('checkcom')
+def checkcom(inputcommand):#入力されたコマンドが不正なものじゃないか否かの処理
     i = 0
     for i in range(0,len(comlist)):
         i + 1
-        #print(i)
         if inputcommand == comlist[i]:
-            #print('a')
             runcom = comlist[i]
-            #print(runcom)
-            #import command
             comprocessing(runcom)
-            #print('finishcheckcom')
             start()
     else:
         print(inputcommand + ': Command not found')
@@ -50,12 +27,9 @@ def checkcom(inputcommand):
         else:
             start()
 
-if __name__ != '__main__':
-    print('finish command.py')
-
-if __name__ == '__main__' or isstart == False:
+if __name__ == '__main__' or isstart == False:#実行が初回か否かの処理
     print('Started main.py....')
-    print('StudyProgram Ver.1.0β')
+    print('StudyProgram Ver.1.5')
     print('Copyright ©︎2020 Hirotoshi Yoshida. All Rights Reserved.')
     ismathrun = False
     isstart = True
