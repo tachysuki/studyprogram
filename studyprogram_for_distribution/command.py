@@ -33,7 +33,6 @@ def comprocessing(runcom):#コマンド実行の関数
     elif runcom == 'Japanese':
         print('mode: Japanese')
         if japaneseisrun == True:
-            print('japaneseisrun == True')
             import japanese
             japanese.question()
         import japanese
@@ -41,7 +40,6 @@ def comprocessing(runcom):#コマンド実行の関数
     elif runcom == 'Math':
         print('mode: Math')
         if mathisrun == True:
-            print('mathisrun == True')
             import my_math
             my_math.question()
         import my_math
@@ -49,7 +47,6 @@ def comprocessing(runcom):#コマンド実行の関数
     elif runcom == 'Science':
         print('mode: Science')
         if scienceisrun == True:
-            print('scienceisrun == True')
             import science
             science.question()
         import science
@@ -57,7 +54,6 @@ def comprocessing(runcom):#コマンド実行の関数
     elif runcom == 'SocialStudies':
         print('mode: SocialStudies')
         if socialstuisrun == True:
-            print('socialstuisrun == True')
             import socialstu
             socialstu.question()
         import socialstu
@@ -65,7 +61,6 @@ def comprocessing(runcom):#コマンド実行の関数
     elif runcom == 'English':
         print('mode: English')
         if englishisrun == True:
-            print('englishisrun == True')
             import english
             english.question()
         import english
